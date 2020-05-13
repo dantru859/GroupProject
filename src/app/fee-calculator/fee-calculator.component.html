@@ -1,0 +1,44 @@
+<div style="margin-top: 2rem; margin-left: 5.5rem">
+  <h3>Fees Calculator</h3>
+    <mat-form-field class="example-full-width">
+      <mat-label>Solid Price</mat-label>
+      <input matInput placeholder="100" (change)="getSoldPrice($event)" value="{{ soldPrice }}">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Shipping Charge</mat-label>
+      <input matInput placeholder="10.00" (change)="getShippingCharge($event)" value="{{ shippingCharge }}">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Item Cost</mat-label>
+      <input matInput placeholder="10.00" (change)="getItemCost($event)" value="{{ itemCost }}">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Shipping Cost</mat-label>
+      <input matInput placeholder="2" (change)="getShippingCost($event)" value="{{ shippingCost}}"/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Top Rated Seller?</mat-label>
+      <mat-select [(value)]="topRated">
+        <mat-option>None</mat-option>
+        <mat-option value="yes">Yes</mat-option>
+        <mat-option value="no">No</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Overseas Sales?</mat-label>
+      <mat-select [(value)]="overseas">
+        <mat-option>None</mat-option>
+        <mat-option value="no">No</mat-option>
+        <mat-option value="yes">Yes</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  <p>My Fee: {{fee}}%</p>
+  <p>Total Profit: {{getProfit()}}</p>
+
+</div>

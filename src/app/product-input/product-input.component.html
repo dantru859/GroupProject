@@ -1,0 +1,51 @@
+<div style="display: inline-flex; margin-bottom: 2rem; margin-top: 2rem">
+<form class="mat-form-field" style="padding-right: 3rem; margin-left: 4rem">
+<h1>Create a product</h1>
+  <mat-form-field class="mat-form-field">
+  <mat-label>ID:</mat-label>
+  <input matInput placeholder="ID" type="text" id="cid" name="id" (change)="onChangeId($event)"><br><br>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="mat-form-field">
+  <mat-label>Product name: </mat-label>
+  <input matInput placeholder="Name" type="text"  id="cname" name="name" (change)="onChangeName($event)" ><br><br>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="mat-form-field">
+  <mat-label>Product type: </mat-label>
+  <input matInput placeholder="Type" type="text" id="ctype" name="type" (change)="onChangeType($event)"><br><br>
+  </mat-form-field>
+  <br>
+  <button mat-stroked-button (click)="onSubmit($event)">Add product</button>
+</form>
+
+  <form class="mat-form-field" style="padding-right: 3rem">
+     <h1>Delete a product (ID)</h1>
+    <mat-form-field class="mat-form-field">
+      <mat-label>ID:</mat-label>
+      <input matInput placeholder="ID" type="text" id="did" name="id" (change)="onChangeId($event)"><br><br>
+    </mat-form-field>
+    <br>
+    <button mat-stroked-button (click)="onSubmit($event)">Delete product</button>
+  </form>
+
+  <form class="mat-form-field" style="padding-right: 3rem">
+    <h1>Update a product (By ID)</h1>
+    <mat-form-field class="mat-form-field">
+      <mat-label>ID:</mat-label>
+      <input matInput placeholder="ID" type="text" id="uid" name="id" (change)="onChangeId($event)"><br><br>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-form-field">
+      <mat-label>Product name: </mat-label>
+      <input matInput placeholder="Name" type="text"  id="uname" name="name" (change)="onChangeName($event)" ><br><br>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-form-field">
+      <mat-label>Product type: </mat-label>
+      <input matInput placeholder="Type" type="text" id="utype" name="type" (change)="onChangeType($event)"><br><br>
+    </mat-form-field>
+    <br>
+    <button mat-stroked-button (click)="onSubmit($event)">Update product</button>
+  </form>
+</div>
